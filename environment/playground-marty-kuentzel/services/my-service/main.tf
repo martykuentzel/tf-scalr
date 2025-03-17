@@ -28,7 +28,7 @@ data "terraform_remote_state" "cloud_sql" {
 module "my_service" {
   source = "../../../../modules/my-module"
 
-  service            = "my-service"
+  service            = "my-service-2"
   environment      = local.environment
   db_instance_name = data.terraform_remote_state.cloud_sql.outputs.database_instance.name
 }
